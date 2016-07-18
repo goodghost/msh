@@ -1,0 +1,55 @@
+// Hide unnecessary elements.
+#navbar-administration, .tabs, .breadcrumb, .messages, .action-links {
+  display: none;
+}
+
+.views-field-views-bulk-operations, .view-filters .form-submit, .vbo-views-form #edit-select, .views-field-edit-node, .views-field.active img {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.view-filters {
+  margin-bottom: 10px;
+}
+
+// Tables.
+table {
+  width: 100%;
+}
+table th, table th * {
+  font-weight: bold !important;
+}
+table th, table td {
+  border: 1px solid black !important;
+  background: #ffffff !important;
+  color: #000 !important;
+}
+
+#overlay-titlebar, #branding, .views-ui-dialog .views-override {
+  background: none;
+}
+
+#branding {
+  padding-bottom: 0;
+}
+
+#branding h1.page-title {
+  color: black;
+}
+
+input.form-text, select.form-select, .chosen-container-single .chosen-single {
+  border: 0;
+  border-bottom: 1px dotted gray;
+  border-radius: 0;
+  background: #ffffff !important;
+}
+
+.top-bar,
+#navigation,
+#navbar-administration {
+  display: none;
+}

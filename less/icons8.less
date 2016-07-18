@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Android";
+  src: url("../fonts/Android_4fc2280786917cb8fe6d53c2ebba7ce2.eot");
+  src: url("../fonts/Android_4fc2280786917cb8fe6d53c2ebba7ce2.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Android_4fc2280786917cb8fe6d53c2ebba7ce2.woff") format("woff"),
+  url("../fonts/Android_4fc2280786917cb8fe6d53c2ebba7ce2.ttf") format("truetype"),
+  url("../fonts/Android_4fc2280786917cb8fe6d53c2ebba7ce2.svg#Android") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Android";
+    src: url("../fonts/Android_4fc2280786917cb8fe6d53c2ebba7ce2.svg#Android") format("svg");
+  }
+}
+
+@icons8: 
+  airplane f100, 
+  alarm_clock f101, 
+  nursery f102,
+  money_exchange f104,
+  baseball f105,
+  basketball f106,
+  shower f107,
+  beach f108,
+  beach_ball f109,
+  beer_glass f10b,
+  bell_service f10c,
+  birthday f10e,
+  bowling f10f,
+  business f110,
+  coach f111,
+  photography f114,
+  car f116,
+  party f118,
+  casino f11b,
+  climbing f11c,
+  bar f11b,
+  coffee f11e,
+  theatre f11f,
+  comedy f120,
+  cricket f121,
+  club f122,
+  rowing f126,
+  doctor f127,
+  oceanarium f128,
+  gym f12a,
+  money f12c,
+  family f12e,
+  cinema f12f,
+  diving f130,
+  football f131,
+  frisbee f132,
+  golf f133,
+  helicopter f134,
+  ice_hockey f135,
+  equestrian f136,
+  medical_clinic f137,
+  ice_skating f139,
+  wind_surfing f13a,
+  iron f13c,
+  barbeque f13d,
+  snorkeling f13f,
+  video_game f142,
+  museum f143,
+  music f144,
+  classical_concert f145,
+  canoeing f147,
+  telephone f149,
+  landscape f14a,
+  radio f14e,
+  cycling f14f,
+  dining f150,
+  roller_skating f152,
+  rugby f153,
+  running f154,
+  paddle_boarding f155,
+  sailing f156,
+  concert f157,
+  motorcycle f159,
+  water f15a,
+  shopping f15b,
+  skiing f15c,
+  luggage f15d,
+  surfing f15e,
+  swimming f15f,
+  TV f160,
+  monument f161,
+  taxi f162,
+  tea f163,
+  tennis f164,
+  activity f165,
+  spa f166,
+  train f167,
+  sport f168,
+  hiking f169,
+  volleyball f16c,
+  laundry f16d,
+  wedding f16e,
+  wifi f16f,
+  wine f170,
+  motor_boat f171,
+  yoga f172,
+  front_desk f10c,
+  beer f10b
+;
+
+.msh-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 Android;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Default icon.
+.msh-icon:before {
+  content: '?';
+}
+
+// Makes the font 33% larger relative to the icon container.
+.msh-icon-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.msh-icon-2x {
+  font-size: 2em;
+}
+.msh-icon-3x {
+  font-size: 3em;
+}
+.msh-icon-4x {
+  font-size: 4em;
+}
+.msh-icon-5x {
+  font-size: 5em;
+}
+
+.msh-icon {
+  .for(@icons8); .-each(@name) {
+    @css_class:  extract(@name, 1);
+    @icon:       extract(@name, 2); 
+    &.msh-icon-@{css_class} {
+      &:before {
+        content: '\@{icon}';
+      }
+    }
+  }
+}
